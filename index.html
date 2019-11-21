@@ -1,19 +1,29 @@
+<script type="text/javascript">
+
+var phoneWidth =  parseInt(window.screen.width);
+
+var phoneScale = phoneWidth/640;
+
+var ua = navigator.userAgent;
+
+if (/Android (d+.d+)/.test(ua)){var version = parseFloat(RegExp.$1);
+
+if(version>2.3){ document.write(‘<meta name="viewport" content="width=640, minimum-scale = ‘+phoneScale+‘, maximum-scale = ‘+phoneScale+‘, target-densitydpi=device-dpi">‘); }
+
+else{document.write(‘<meta name="viewport" content="width=640, target-densitydpi=device-dpi">‘); }
+
+else { document.write(‘<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">‘); }
+
+</script>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
+	
     <title>关于我们</title>
         <title>my1</title>
 </head>
-	<style>
-            body {
-                
-                width: 417px;
-                height: 741px;
-            }
-             
-            
-        </style>
+	
 
 	
     <body background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574362827590&di=a012fb54e62a7dc5bb25b62cfd2edf4c&imgtype=0&src=http%3A%2F%2Fim6.leaderhero.com%2Fwallpaper%2F20141024%2Fbae8d0cc34.jpg.417_741.jpg">

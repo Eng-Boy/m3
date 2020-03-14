@@ -1,34 +1,71 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-    <title>关于我们</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
-	<style>
-            body {
-                
-                width: 417px;
-                height: 741px;
-            }
-             
-            
-        </style>
-	<center>
+<style type="text/css">
+    html,body {
+        height: 100%;
+    }
+    div {
+        font-size: 60px;
+        height:100%;;
+        background-color: lightgoldenrodyellow;
+    }
 
-	
-    <body background="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1574362827590&di=a012fb54e62a7dc5bb25b62cfd2edf4c&imgtype=0&src=http%3A%2F%2Fim6.leaderhero.com%2Fwallpaper%2F20141024%2Fbae8d0cc34.jpg.417_741.jpg">
-<h1><h1>
-	<center>你好！</center>
-<p><strong>这是我的第一个网页
-	搭载着我的作品</strong></p>
-    
-    
-    
-    <p>我的理想之路（片头）</p>
-   <iframe src="//player.bilibili.com/player.html?aid=76252011&cid=130430367&page=1"  width="417" height="245" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-    <p>我的理想之路（作品1）</p>
-    <iframe src="//player.bilibili.com/player.html?aid=75554560&cid=129677569&page=1" width="417" height="245" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-     <p>我的理想之路（作品2）【正在拍摄】</p>
-	</center>
+
+
+    </style>
+
+<body>
+<div id="q" onclick="sj()">
+    数数游戏
+</div>
 </body>
+<script>
+    var number =prompt("数到几过"),a=60;
+    function guo() {
+        document.getElementById("q").style.backgroundColor = "red";
+        document.getElementById("q").innerText="过"+a;
+    }
+    function shu() {
+        document.getElementById("q").style.backgroundColor = "green";
+        document.getElementById("q").innerText = a;
+
+    }
+
+function sj() {
+    if (a % number == 0) {
+        guo()
+    }
+    else {
+        if (a > number) {
+            if ((a-number)%10==0) {
+                guo()
+            }
+            else {
+                if (a>number*10) {
+                    if (Math.floor(a/10)==number) {
+                        guo()
+                    }
+                    else{
+                            shu()
+                    }
+
+                }
+                else {
+                    shu()
+                }
+
+            }
+
+        }
+        else {
+            shu()
+        }
+    }
+    a++
+}
+    </script>
 </html>
